@@ -18,11 +18,11 @@ Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell w
 ###These scripts can also be run on other systems then Linux Mint. Scroll down to the bottom to see on which distro's.
 
 
-Each time I run these scripts, I added a name of the colour behind it 
+Each time I run these scripts, I added a name of the colour behind it
 
     Arc to Arc-Sun
-    Arc-Dark to Arc-Dark-Sun
-    Arc-Darker to Arc-Darker-Sun
+    Arc-Dark to Arc-Sun-Dark
+    Arc-Darker to Arc-Sun-Darker
 
 Sun is just the name of the colour. You can choose any name.
 
@@ -57,11 +57,11 @@ To build the arc theme you'll need following applications.
     * `libgtk-3-dev` for Debian based distros or `gtk3-devel` (RPM) and `libgtk-3-devel` in Solus
     * `git` if you want to clone the source directory
 
-There are several tutorial articles about arc colora on several distro's: 
+There are several tutorial articles about arc colora on several distro's:
 
 	* Linux Mint
 	* Ubuntu
-	* Solus Budgie 
+	* Solus Budgie
 
 http://erikdubois.be/category/themes/arc-based-themes/
 
@@ -78,7 +78,7 @@ http://erikdubois.be/category/themes/arc-based-themes/
 
 **0. Get the source**
 
-First install git 
+First install git
 
     Debian based
 	sudo apt install git
@@ -98,13 +98,15 @@ Get the latest version from Arc Colora, clone the repository with
 
     git clone https://github.com/erikdubois/arc-theme-colora
 
-Copy/paste all scripts inside the directory 
+Copy/paste all scripts inside the directory
 
     arc-theme-colora
 
-to 
+to
 
     arc-theme
+
+Copy/paste also the openbox-3 directory over.
 
 Let us run the scripts.
 
@@ -113,6 +115,11 @@ Let us run the scripts.
 Choose your distro and run the script to install your applications.
 
     0-install-all-needed-software-for-xxxx.sh
+
+
+NOW COPY/PASTE ALL SCRIPTS FROM 1 till 8 to Arc-theme folder from Horst3180.
+The file starting with 8 has been added since April 2017 to support openbox distro's.
+You are not supposed to run number 8 but the scripts need it.
 
 
 **1. Change the colour**
@@ -170,7 +177,7 @@ It has now the standard name Arc, Arc-Dark and Arc-Darker.
 
 We will run the last script nr 5
 
-	- to rename the folders 
+	- to rename the folders
 	- to move the folders to ~/.themes
 	- to change the content of the three index.themes
 
@@ -179,13 +186,13 @@ Follow the instructions in the script. It will ask for the name to add behind th
 	Arc-Sun for example
 
 
-After the installation is complete you can activate the theme with `gnome-tweak-tool` or a similar program by selecting `Mint-Y-Sun`, `Mint-Y-Darker-Sun` or `Mint-Y-Dark-Sun` as Window/GTK+ theme. If you named the theme "Sun". That is just an example.
+After the installation is complete you can activate the theme with `gnome-tweak-tool` or a similar program by selecting `Arc-Sun`, `Arc-Sun-Dark` or `Arc-Sun-Darker` as Window/GTK+ theme. If you named the theme "Sun". That is just an example.
 
 **6. Erase the theme in /usr/share/themes**
 
 <b>Your personal theme is in ~/.themes with the changed name and changed index.themes IF you ran previous script.</b>
 
-You can erase the ones in /usr/share/themes. 
+You can erase the ones in /usr/share/themes.
 
 If you want to erase the original files in the folder
 
@@ -209,7 +216,7 @@ If you want the original Arc theme back. Just run this script
 # Select the new theme
 
 
-After the installation is complete you can activate the theme with your theme manager by selecting `Arc-Sun`, `Arc-Darker-Sun` or `Arc-Dark-Sun` as Window/GTK+ theme.
+After the installation is complete you can activate the theme with your theme manager by selecting `Arc-Sun`, `Arc-Sun-Darker` or `Arc-Sun-Dark` as Window/GTK+ theme.
 
 
 # Themes created with this script
@@ -347,7 +354,7 @@ Since I sometimes forget to make the script executable, I include here what you 
 
 A script can only run when it is marked as an executable.
 
-	ls -al 
+	ls -al
 
 Above code will reveal if a script has an "x". X meaning executable.
 Google "chmod" and "execute" and you will find more info.

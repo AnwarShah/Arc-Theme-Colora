@@ -11,36 +11,15 @@
 #
 ##################################################################################################################
 
-
-choice=$1
-
-if [ $# -ne 1 ]; then
-
-    echo "Let us rename the folders so they are unique :"
-	echo "Your name will be added after 'Arc-'"
-	echo "E.g. Arc-Sun, Arc-Sun-Dark, Arc-Sun-Darker"
-
-	read -p "How should we name this new theme? First letter is a capital letter : " choice
-
-	echo "Renaming the folders"
-
-
-fi
-
-
-
-function makearc
-{
 # if there is no hidden folder then make one
 [ -d $HOME"/.themes" ] || mkdir -p $HOME"/.themes"
 cp -rf /usr/share/themes/Arc $HOME"/.themes"
 cp -rf /usr/share/themes/Arc-Dark $HOME"/.themes"
 cp -rf /usr/share/themes/Arc-Darker $HOME"/.themes"
 
-<<<<<<< HEAD
 echo "Let us rename the folders so they are unique :"
-echo "Your name will be added after 'Arc' word"
-echo "E.g. Arc-Sun, Arc-Sun-Dark, Arc-Sun-Darker" 
+echo "Your name will be added after 'Arc-'"
+echo "E.g. Arc-Sun, Arc-Sun-Dark, Arc-Sun-Darker"
 
 read -p "How should we name this new theme? First letter is a capital letter : " choice
 
@@ -48,12 +27,7 @@ echo "Renaming the folders"
 
 mv $HOME"/.themes/Arc" $HOME"/.themes/Arc-"$choice
 mv $HOME"/.themes/Arc-Dark" $HOME"/.themes/Arc-"$choice"-Dark"
-mv $HOME"/.themes/Arc-Darker" $HOME"/.themes/Arc"$choice"-Darker"
-=======
-mv $HOME"/.themes/Arc" $HOME"/.themes/Arc-"$choice
-mv $HOME"/.themes/Arc-Dark" $HOME"/.themes/Arc-"$choice"-Dark"
 mv $HOME"/.themes/Arc-Darker" $HOME"/.themes/Arc-"$choice"-Darker"
->>>>>>> 5d69aa2f692a1ec0d42db61e1750c4e45cba6ed5
 
 echo "################################################################"
 echo "Renaming the content of the index.theme"
@@ -61,22 +35,13 @@ echo "Arc-$choice-Darker"
 find $HOME"/.themes/Arc-"$choice"-Darker" -name "index.theme" -type f -exec sed -i 's/'Name=Arc-Darker'/'Name=Arc-$choice-Darker'/g' {}  \;
 find $HOME"/.themes/Arc-"$choice"-Darker" -name "index.theme" -type f -exec sed -i 's/'GtkTheme=Arc-Darker'/'GtkTheme=Arc-$choice-Darker'/g' {}  \;
 find $HOME"/.themes/Arc-"$choice"-Darker" -name "index.theme" -type f -exec sed -i 's/'MetacityTheme=Arc-Darker'/'MetacityTheme=Arc-$choice-Darker'/g' {}  \;
-<<<<<<< HEAD
-echo "################################################################" 
-=======
 echo "################################################################"
->>>>>>> 5d69aa2f692a1ec0d42db61e1750c4e45cba6ed5
 echo "Renaming inside the index.theme"
 echo "Arc-$choice-Dark"
 find $HOME"/.themes/Arc-"$choice"-Dark" -name "index.theme" -type f -exec sed -i 's/'Name=Arc-Dark'/'Name=Arc-$choice-Dark'/g' {}  \;
 find $HOME"/.themes/Arc-"$choice"-Dark" -name "index.theme" -type f -exec sed -i 's/'GtkTheme=Arc-Dark'/'GtkTheme=Arc-$choice-Dark'/g' {}  \;
-<<<<<<< HEAD
-find $HOME"/.themes/Arc-"$choice"-Dark" -name "index.theme" -type f -exec sed -i 's/'MetacityTheme=Arc-Dark'/'MetacityTheme=Arc-Dark-$choice'/g' {}  \;
-echo "################################################################" 
-=======
 find $HOME"/.themes/Arc-"$choice"-Dark" -name "index.theme" -type f -exec sed -i 's/'MetacityTheme=Arc-Dark'/'MetacityTheme=Arc-$choice-Dark'/g' {}  \;
 echo "################################################################"
->>>>>>> 5d69aa2f692a1ec0d42db61e1750c4e45cba6ed5
 echo "Renaming inside the index.theme"
 echo "Arc-$choice"
 find $HOME"/.themes/Arc-"$choice -name "index.theme" -type f -exec sed -i 's/'Name=Arc'/'Name=Arc-$choice'/g' {}  \;
@@ -90,8 +55,3 @@ echo "If you made a mistake, delete the folders in .themes and run the script ag
 echo "Select the new theme with your theme manager and enjoy!"
 echo "Script 6 will delete your personal theme in /usr/share/themes."
 echo "Script 7 will install the original (blue) arc theme back."
-
-}
-
-
-makearc
