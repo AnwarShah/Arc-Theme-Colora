@@ -10,13 +10,11 @@
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
 #
 ##################################################################################################################
-
-# Ubuntu
-
-sudo pacman -S autoconf automake pkg-config inkscape optipng
-
-
-echo "We install all needed software depending on the distro you are on."
+echo "#####################################################################"
+echo "Removing the personal Arc theme from /usr/share/themes."
+sudo rm -rf /usr/share/themes/{Arc,Arc-Darker,Arc-Dark}
 echo
-echo "Next up figure out the colour accent of your new Arc theme online or with gpick or other software."
-echo "Then change the colour for the variable NEWCOLOUR1 in script 1-change-color, save and run script 1."
+echo "Your personal arc themes have been removed from /usr/share/themes."
+echo "You can recreate the original blue Arc theme in script 8 if you want."
+echo "#####################################################################"
+echo "Run next script to have the original Arch theme back (blue accents)."
